@@ -1,0 +1,115 @@
+@use "colors-and-bcg";
+
+
+.header {
+
+    &__wrapper {
+        min-width: 320px;
+        background: colors-and-bcg.$body-bcg;
+        padding-bottom: 30px;
+    }
+
+    &__brand-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__span {
+        margin-left: 10px;
+
+        &-call {
+            display: none;
+
+            @media screen and (min-width: 562px) {
+                display: inline;
+            }
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        color: colors-and-bcg.$c-primary;
+        text-shadow: colors-and-bcg.$h1-shadow;
+        margin-bottom: 0;
+    }
+
+    &__contact-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+    }
+
+    &__contact {
+        display: flex;
+        align-items: center;
+        order: 1;
+        padding: 8px 15px;
+        color: black;
+        text-shadow: colors-and-bcg.$gentle-shadow;
+        margin-right: 22px;
+
+        @media screen and (min-width: 449px) {
+            margin-right: 43px;
+        }
+
+        @media screen and (min-width: 1014px) {
+            margin-right: 0;
+        }
+
+        &::before {
+            content: "";
+            display: inline-block;
+            background-image: url(/images/telephone-icon.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 30px;
+            width: 30px;
+
+            @media screen and (min-width: 449px) {
+                margin-right: 10px;
+            }
+        }
+
+        &:hover, :focus, :active {
+            transform: scale(1.05);
+            color: green;
+        }
+    }
+
+    &__contact-other {
+        display: flex;
+        width: 120px;
+        justify-content: space-evenly;
+
+        @media screen and (min-width: 405px) {
+            width: 185px;
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: 35px;
+        height: 35px;
+        border: 2px solid white;
+        border-radius: 50%;
+
+        &:hover, :focus, :active {
+            transform: scale(1.2);
+        }
+    }
+}
+
+/* 
+@media screen and (min-width: 650px) {
+	.header {
+
+        &__icon {
+            display: block;
+        }
+    }
+}
+*/

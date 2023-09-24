@@ -1,0 +1,41 @@
+@use "colors-and-bcg";
+
+.menu {
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        background-image: colors-and-bcg.$body-bcg;
+    }
+    
+    &__item {
+        flex: 0 0 25%; 
+    }
+
+    &__link  {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 5px;
+        border: 1px solid black;
+        background: colors-and-bcg.$menu-item;
+        color: colors-and-bcg.$c-primary;
+
+        &:hover, :focus, :active {
+            background: colors-and-bcg.$button-primary;
+            color: colors-and-bcg.$c-fonts-secondary;
+            text-shadow: colors-and-bcg.$gentle-shadow;
+        }
+        
+        &--first {
+            border-radius: 15px 0 0 0;
+        }
+
+        &--last {
+            border-radius: 0 15px 0 0;
+        }
+    }
+
+}

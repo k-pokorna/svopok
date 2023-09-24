@@ -1,0 +1,17 @@
+@use "colors-and-bcg";
+
+iframe {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.kontakt {
+    &__text {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: 450px) {
+            margin-bottom: 65px;
+        }
+    }
+}

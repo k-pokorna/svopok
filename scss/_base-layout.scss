@@ -1,0 +1,71 @@
+@use "colors-and-bcg";
+
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: colors-and-bcg.$body-bcg;
+}
+
+img {
+    width: 100%;
+}
+
+.all-wrapper {
+    margin: 60px auto 40px auto;
+    width: 100%;
+    max-width: 1000px; // původně 1300px
+    min-width: 320px;
+    background-color: colors-and-bcg.$c-primary;
+}
+
+.main {
+    padding: 1rem 2.2rem 0 2.2rem;
+
+    @media screen and (min-width: 530px) {
+        padding: 2rem 4rem 0 4rem;
+    }
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.main > :last-child {
+    margin-bottom: 0;
+}
+
+.button {
+    background: colors-and-bcg.$button-primary;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    margin-bottom: 45px;
+
+    @media screen and (min-width: 490px) {
+        margin-bottom: 65px;
+    }
+}
+
+h3 {
+    margin-top: 65px;
+}
+
+.list {
+    list-style-image: url(/images/key-list-icon2.png);
+    list-style-type: none;
+}
+
+.list-item {
+    padding-left: 0.5rem;
+}

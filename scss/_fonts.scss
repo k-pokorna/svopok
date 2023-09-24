@@ -1,0 +1,48 @@
+body {
+    font-size: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+
+    @media screen and (min-width: 450px) {
+        font-size: 125%;
+    }
+}
+
+main {
+    font-size: 98%;
+
+    @media screen and (min-width: 450px) {
+        font-size: 95%;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-size: 1.65rem;
+    margin-top: 0;
+
+    @media screen and (min-width: 540px) {
+        font-size: 2rem;
+    }
+}
+
+// Čárka pod nadpisem
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #0000ff;
+    margin-top: 10px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}

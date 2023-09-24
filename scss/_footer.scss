@@ -1,0 +1,27 @@
+@use "colors-and-bcg";
+
+.footer {
+    color: colors-and-bcg.$c-primary;
+    text-shadow: colors-and-bcg.$h1-shadow;
+    text-align: center;
+
+    &__copyright {
+        margin-bottom: 0;
+    }
+    
+    &__attribution {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+
+        & a {
+            text-decoration: none;
+            color: colors-and-bcg.$c-primary;
+            text-shadow: colors-and-bcg.$h1-shadow;
+        }
+    }
+
+    &__icon {
+        height: 16px;
+        width: 16px;
+    }
+}

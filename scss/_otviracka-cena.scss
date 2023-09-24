@@ -1,0 +1,58 @@
+@use "colors-and-bcg";
+
+/* Základní styl tabulky */
+table {
+    // font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 600px;
+    border: 2px solid rgb(174, 174, 174);
+    margin-top: 40px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styl pro záhlaví tabulky */
+  thead th {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  /* Styl pro buňky v záhlaví */
+  thead td {
+    font-weight: bold;
+  }
+  
+  /* Styl pro sudé řádky */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #cae7f4;
+  }
+
+  /* Styl pro buňky v těle tabulky */
+  td {
+    padding: 10px;
+  }
+  
+
+  
+  /* Styl pro buňky s pohotovostí */
+  td[colspan="2"][rowspan="2"] {
+    font-style: italic;
+    font-size: 14px;
+    color: #FF0000;
+  }
+  
+  /* Úprava stylu pro malé displeje */
+  @media screen and (max-width: 600px) {
+    table {
+      font-size: 14px;
+    }
+    td,
+    th {
+      padding: 8px;
+    }
+  }
